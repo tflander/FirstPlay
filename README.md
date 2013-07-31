@@ -1,14 +1,20 @@
-Step 1 Instructions
+Step 2 Instructions
 ===================
 
-- Make sure you have play framework installed.  Follow step-0 instructions if you don't.
-- Retrieve code from this branch:  git checkout -f step1
-- Run tests with code coverage:  play scct:test
-- Verify the code coverage report in target/scala-2.10/coverage-report/index.html
-- Verify poor or no coverage on generated code.  SCCT doesn't support a way to ignore generated code???
+- Retrieve code from this branch:  git checkout -f step2
+- Verify compile error in ListController.scala
+- Fix compile error by defining a case class Contact in app/models.Contact.scala
+- Run the app and click the link to verify the Rest/Json call
+- Examine test ListControllerTest.scala
+- run all tests and verify they are green
 
 Change history:
 ===============
+
+Step 2
+------
+- Replace default page with REST/JSON service description (index.scala.html)
+- create route and controller for /list rest call
 
 Step 1
 ------
