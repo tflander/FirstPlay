@@ -1,12 +1,7 @@
-Step 2 Instructions
+Step 3 Instructions
 ===================
 
-- Retrieve code from this branch:  git checkout -f step2
-- Verify compile error in ListController.scala
-- Fix compile error by defining a case class Contact in app/models.Contact.scala
-- Run the app and click the link to verify the Rest/Json call
-- Examine test ListControllerTest.scala
-- run all tests and verify they are green
+- Retrieve code from this branch:  git checkout -f step3
 
 Change history:
 ===============
