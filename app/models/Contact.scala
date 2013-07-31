@@ -1,9 +1,6 @@
 package models
 
-//class Contact {
-//
-//}
+class Contact {
 
-case class Contact(
-  firstName: String,
-  lastName: String)
+}
+
