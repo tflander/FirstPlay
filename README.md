@@ -6,7 +6,7 @@ Step 1
   
 - Remove dependencies in Build.scala for JDBC and ANORM
 
-- add SCCT plugin through plugins.sbt
+- add SCCT plugin through plugins.sbt and Build.scala
 
 - remove IntegrationSpec.scala from test, since we will be doing end-to-end tests through a 
   FakeApplication.  We don't need to use HTTP for testing.
