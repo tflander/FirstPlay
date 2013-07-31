@@ -1,3 +1,15 @@
+Step 1 Instructions
+===================
+
+- Make sure you have play framework installed.  Follow step-0 instructions if you don't.
+- Retrieve code from this branch:  git checkout -f step1
+- Run tests with code coverage:  play scct:test
+- Verify the code coverage report in target/scala-2.10/coverage-report/index.html
+- Verify poor or no coverage on generated code.  SCCT doesn't support a way to ignore generated code???
+
+Change history:
+===============
+
 Step 1
 ------
 - Add dependencies to Build.scala:

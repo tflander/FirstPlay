@@ -6,6 +6,19 @@ object ApplicationBuild extends Build {
 
   val appName         = "FirstPlay"
   val appVersion      = "1.0-SNAPSHOT"
+    
+//  val coberturaIgnore = "controllers.javascript"
+//    
+//  val a = ScctPlugin.instrumentSettings
+//  println("##############")
+//  println(a)
+//  println(a.getClass.getName)
+//  println(a.size)
+//  a.foreach { thing =>
+//    println(thing)
+//    println("")
+//  }
+//  println("##############")
 
   lazy val additionalSettings = Defaults.defaultSettings ++ seq(ScctPlugin.instrumentSettings: _*)
     
