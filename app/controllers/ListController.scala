@@ -16,13 +16,13 @@ object ListController extends Controller {
       Contact("Todd", "Flanders"),
       Contact("Dave", "Moore"))
 
-    val c = for (contact <- contacts) yield {
+    val contactsAsJson = for (contact <- contacts) yield {
       JsObject(Seq(
         ("fName", JsString(contact.firstName)),
         ("lName", JsString(contact.lastName))))
     }
 
-    val httpResponse = JsArray(c).toString
+    val httpResponse = JsArray(contactsAsJson).toString
 
     Ok(httpResponse).as("application/json")
   }

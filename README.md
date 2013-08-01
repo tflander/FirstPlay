@@ -2,6 +2,7 @@ Step 3 Instructions
 ===================
 
 - Retrieve code from this branch:  git checkout -f step3
+- Verify the code works and tests pass (in case you needed help with step 2)
 
 Change history:
 ===============
