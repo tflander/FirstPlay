@@ -1,14 +1,25 @@
-Step 5 Instructions
+Step 6 Instructions
 ===================
 
-- Retrieve code from this branch:  git checkout -f step5
-- Verify work required for step 4 is complete.
+- Retrieve code from this branch:  git checkout -f step6
+- Verify our controller is doing too much.  The commended 
+block should be delegated to the singleton ContactServices.
+- Create a singleton service to retrieve the contact JSON
 
 Change history:
 ===============
 
+Step 6
+------
+- Create ContactService
+
+Step 5
+------
+- Add the optional phone field to the case class for step 4
+
 Step 4
 ------
+- Controller now expects an optional phone field for the contact
 
 Step 3
 ------

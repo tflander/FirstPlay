@@ -7,11 +7,13 @@ import play.api.libs.json.JsArray
 import play.api.libs.json.JsString
 import play.api.libs.json.Json
 import models.Contact
+import services.ContactServices
 
 object ListController extends Controller {
 
   def index = Action {
 
+    /*
     val contacts = Seq(
       Contact("Todd", "Flanders", Some("313-555-1212")),
       Contact("Dave", "Moore"))
@@ -35,7 +37,10 @@ object ListController extends Controller {
     }
     
     val contactsAsJson = for (contact <- contacts) yield contactToJson(contact)
-
+*/
+    
+    val contactsAsJson = ContactServices.contacts()
+    
     val httpResponse = JsArray(contactsAsJson).toString
 
     Ok(httpResponse).as("application/json")
