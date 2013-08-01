@@ -13,14 +13,20 @@ object ListController extends Controller {
   def index = Action {
 
     val contacts = Seq(
-      Contact("Todd", "Flanders"),
+      Contact("Todd", "Flanders", Some("313-555-1212")),
       Contact("Dave", "Moore"))
 
-    val contactsAsJson = for (contact <- contacts) yield {
+    def contactToJson(contact: Contact) = {
       JsObject(Seq(
-        ("fName", JsString(contact.firstName)),
-        ("lName", JsString(contact.lastName))))
+        Some(("fName", JsString(contact.firstName))),
+        Some(("lName", JsString(contact.lastName))),
+        contact.phone match {
+          case None => None
+          case Some(phone) => Some(("phone", JsString(phone)))
+        }).flatten)
     }
+
+    val contactsAsJson = for (contact <- contacts) yield contactToJson(contact)
 
     val httpResponse = JsArray(contactsAsJson).toString
 

@@ -1,11 +1,18 @@
 Step 3 Instructions
 ===================
 
-- Retrieve code from this branch:  git checkout -f step3
-- Verify the code works and tests pass (in case you needed help with step 2)
+- Retrieve code from this branch:  git checkout -f step4
+- 
 
 Change history:
 ===============
+
+Step 4
+------
+
+Step 3
+------
+- Implement case class for step 2
 
 Step 2
 ------
