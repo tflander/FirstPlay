@@ -1,13 +1,16 @@
-Step 6 Instructions
+Step 7 Instructions
 ===================
 
-- Retrieve code from this branch:  git checkout -f step6
-- Verify our controller is doing too much.  The commended 
-block should be delegated to the singleton ContactServices.
-- Create a singleton service to retrieve the contact JSON
+- Retrieve code from this branch:  git checkout -f step7
+- Verify ContactServices is implemented (cheat for step 6)
+- Verify REST/JSON service and tests
 
 Change history:
 ===============
+
+Step 7
+------
+Implement ContactServices for step 6
 
 Step 6
 ------
