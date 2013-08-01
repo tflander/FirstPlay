@@ -1,11 +1,8 @@
-Step 4 Instructions
+Step 5 Instructions
 ===================
 
-- Retrieve code from this branch:  git checkout -f step4
-- Verify that once again ListController is broken.  The controller 
-expects an optional field for the contact's phone number.
-- Add the optional phone number field to the Contact case class
-- Verify the app runs with the proper JSON response.
+- Retrieve code from this branch:  git checkout -f step5
+- Verify work required for step 4 is complete.
 
 Change history:
 ===============
