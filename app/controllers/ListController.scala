@@ -16,16 +16,24 @@ object ListController extends Controller {
       Contact("Todd", "Flanders", Some("313-555-1212")),
       Contact("Dave", "Moore"))
 
+    def toJson(fieldName: String, value: String) = {
+      Some((fieldName, JsString(value)))
+    }
+    
+    def toJsonOption(fieldName: String, valueOrNot: Option[String]) = {
+      valueOrNot match {
+        case None => None
+        case Some(value) => toJson(fieldName, value)
+      }
+    }
+    
     def contactToJson(contact: Contact) = {
       JsObject(Seq(
-        Some(("fName", JsString(contact.firstName))),
-        Some(("lName", JsString(contact.lastName))),
-        contact.phone match {
-          case None => None
-          case Some(phone) => Some(("phone", JsString(phone)))
-        }).flatten)
+        toJson("fName", contact.firstName),
+        toJson("lName", contact.lastName),
+        toJsonOption("phone", contact.phone)).flatten)
     }
-
+    
     val contactsAsJson = for (contact <- contacts) yield contactToJson(contact)
 
     val httpResponse = JsArray(contactsAsJson).toString
