@@ -6,7 +6,7 @@ Step 2 Instructions
 - Fix compile error by defining a case class Contact in app/models.Contact.scala
 - Run the app and click the link to verify the Rest/Json call
 - Examine test ListControllerTest.scala
-- run all tests and verify they are green
+- run all tests.  Note someone checked in a broken test.  Fix it.
 
 Change history:
 ===============
