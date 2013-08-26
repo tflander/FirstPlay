@@ -12,7 +12,7 @@ class ListControllerTest extends FunSpec with ShouldMatchers {
 
       status(jsonResponse) should be(OK)
       contentType(jsonResponse) should be(Some("application/json"))
-      contentAsString(jsonResponse) should be("""[{"fName":"Todd","lName":"Flanders"},{"fName":"Dave","lName":"Moore"}]""")
+      contentAsString(jsonResponse) should be("""[{"fName":"Todd","lName":"Flanders","phone":"313-555-1212"},{"fName":"Dave","lName":"Moore"}]""")
     }
   }
 }

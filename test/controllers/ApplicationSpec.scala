@@ -19,7 +19,7 @@ class ApplicationSpec extends FunSpec with ShouldMatchers {
 
       status(home) should be(OK)
       contentType(home) should be(Some("text/html"))
-      contentAsString(home) should include("Your new application is ready.")
+      contentAsString(home) should include("A simple REST/JSON service")
     }
   }
 }
